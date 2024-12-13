@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <title>The Seal Programming Language</title>
+</head>
+
+<body>
+    <div class="sidebar_menu hidden">
+        <div class="sidebar">
+            <div class="close"><i class="ri-close-circle-fill"></i></div>
+            <div class="menu">
+                <a href="#">Documentation</a>
+                <a href="#">Examples</a>
+                <a href="#">About Seal</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="navbar">
+            <!-- <div class="logo">Seal</div> -->
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo" width="175px">
+            </div>
+            <div class="links">
+                <!-- <a href="#">Download</a> -->
+                <a href="#">Documentation</a>
+                <a href="#">Examples</a>
+                <a href="#">About Seal</a>
+            </div>
+            <div class="menu_btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <h1>The Seal Programming Language</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias nam sapiente modi assumenda ipsum
+                    molestiae in delectus enim eos voluptatem praesentium possimus odit eaque ex, asperiores autem quas
+                    provident aperiam?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ea natus tempora repellat aspernatur at praesentium ab sed officiis fugit cumque, perferendis quisquam tempore nam similique ipsa atque! Voluptatum, voluptatibus?</p>
+            </div>
+            <div class="right">
+                <pre><code class="language-javascript theme-atom-one-dark">
+// include standard library
+include std
+
+// prints hello world with newline
+std::writeln("Hello, world!")
+
+// define factorial function
+define factor(n)
+    if n == 1 or n == 0
+        return 1
+    return n * factor(n - 1)
+
+// call the function
+var result = factor(5)
+std::writeln(result) // output: 120
+                </code></pre>
+            </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="download">
+            <h1 style="text-align: center;margin-top: 10px;">Download</h1>
+            <div class="buttons">
+                <a href="#">Windows</a>
+                <a href="#">Linux</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/es/languages/javascript.min.js"></script>
+    <script>
+        document.querySelector(".menu_btn").addEventListener("click", () => {
+            document.querySelector(".sidebar_menu").classList.remove("hidden");
+        })
+        document.querySelector(".sidebar .close").addEventListener("click", () => {
+            document.querySelector(".sidebar_menu").classList.add("hidden");
+        })
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
