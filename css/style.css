@@ -18,15 +18,24 @@ body {
 
 h1 {
     font-size: 1.4em;
+    margin: 0px 0px 20px 0px;
 }
 
+/*! GENERAL STYLING FOR CODE BLOCKS */
+code {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+}
+
+/*! Homepage */
 .container {
     width: 80%;
     min-width: 300px;
+
     .navbar {
         display: flex;
         justify-content: space-between;
-        padding: 10px 0;
+        padding: 10px;
         border-bottom: 1px solid #ccc;
         align-items: center;
         .logo {
@@ -78,35 +87,65 @@ h1 {
         .right {
             width: 45%;
             box-sizing: border-box;
-            & > pre {
-                & > code {
-                    border-radius: 5px;
-                }
-            }
         }
     }
 
     .download {
-        margin-top: 20px;
+        margin: 40px 0;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+
         .buttons {
             margin-top: 10px;
+            gap: 15px;
+            display: flex;
+            justify-content: center;
+            
             & > a {
-                display: inline-block;
-                background-color: #282C34;
-                padding: 5px;
-                width: 100px;
+                height: 140px;
+                width: 140px;
+                padding: 10px;
+                border: 1px solid rgba(40, 44, 52, .8);
                 text-align: center;
                 border-radius: 5px;
-                color: white;
+                color: #282C34;
+                font-weight: bold;
                 text-decoration: none;
                 transition: .3s ease all;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                gap: 10px;
+                
+                & img {
+                    height: 90px;
+                }
             }
             & > a:hover {
-                background-color: #4924bf;
+                /* background-color: #4924bf; */
+                /* color: white; */
+                scale: 1.05;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
             }
+            & > a:active {
+                scale: 0.95;
+            }
+        }
+
+        h1{
+            text-align: right;
+        }
+
+        p{
+            text-align: right;
+            margin: 10px 0;
+        }
+
+        > div:nth-child(2){
+            width: 50%;
+            margin-left: 30px;
         }
     }
 }
@@ -179,7 +218,7 @@ h1 {
 
 /* Media queries */
 @media(max-width: 1100px) {
-    .main {
+    .main{
         flex-direction: column;
         gap: 20px;
         width: 100%;
@@ -190,6 +229,31 @@ h1 {
         .right {
             width: 100% !important;
         }
+    }
+
+    .download {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        
+
+        & > div {
+            width: 100% !important;
+
+            & h1, & p {
+                text-align: center !important;
+            }
+        }
+
+        & > div:nth-child(2){
+            margin-left: 0 !important;
+        }
+
+        .buttons {
+            order: 2;
+        }
+
     }
 }
 
@@ -205,4 +269,13 @@ h1 {
             width: 100px;
         }
     }
+    .download{
+        .buttons {
+            gap: 10px !important;
+            & > a > img {
+                height: 80px !important;
+            }
+        }
+    }
 }
+
