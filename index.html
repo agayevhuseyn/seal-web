@@ -18,7 +18,7 @@
             <div class="close"><i class="ri-close-circle-fill"></i></div>
             <div class="menu">
                 <a href="#">Documentation</a>
-                <a href="#">Examples</a>
+                <a href="./pages/examples.html">Examples</a>
                 <a href="#">About Seal</a>
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div class="links">
                 <!-- <a href="#">Download</a> -->
                 <a href="#">Documentation</a>
-                <a href="#">Examples</a>
+                <a href="./pages/examples.html">Examples</a>
                 <a href="#">About Seal</a>
             </div>
             <div class="menu_btn">
@@ -92,15 +92,7 @@ std::writeln(result) // output: 120
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/es/languages/javascript.min.js"></script>
-    <script>
-        document.querySelector(".menu_btn").addEventListener("click", () => {
-            document.querySelector(".sidebar_menu").classList.remove("hidden");
-        })
-        document.querySelector(".sidebar .close").addEventListener("click", () => {
-            document.querySelector(".sidebar_menu").classList.add("hidden");
-        })
-        hljs.highlightAll();
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

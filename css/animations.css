@@ -1,0 +1,27 @@
+:root{
+    --anim-duration: 200ms;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut var(--anim-duration) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn var(--anim-duration) forwards;
+}
