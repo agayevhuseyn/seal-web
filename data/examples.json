@@ -1,0 +1,69 @@
+[
+    {
+        "name": "Example 1",
+        "content": [
+            {
+                "type": "text",
+                "value": "This is an example of a text block."
+            },
+            {
+                "type": "code",
+                "value": "// include standard library\ninclude std\n\n// prints hello world with newline\nstd::writeln('Hello, world!')\n\n// define factorial function\ndefine factor(n)\n    if n == 1 or n == 0\n        return 1\n    return n * factor(n - 1)\n\n// call the function\nvar result = factor(5)\nstd::writeln(result) // output: 120\n"
+            },
+            {
+                "type": "text",
+                "value": "This is another text block."
+            },
+            {
+                "type": "text",
+                "value": "This is the new text block that has been added."
+            }
+        ]
+    },
+    {
+        "name": "Example 2",
+        "content": [
+            {
+                "type": "code",
+                "value": "// include standard library\ninclude std\n\n// prints hello world with newline\nstd::writeln('Hello, world!')\n\n// define factorial function\ndefine factor(n)\n    if n == 1 or n == 0\n        return 1\n    return n * factor(n - 1)\n\n// call the function\nvar result = factor(5)\nstd::writeln(result) // output: 120\n"
+            },
+            {
+                "type": "text",
+                "value": "This is an example of a text block."
+            },
+            {
+                "type": "code",
+                "value": "// include standard library\ninclude std\n\n// prints hello world with newline\nstd::writeln('Hello, world!')\n\n// define factorial function\ndefine factor(n)\n    if n == 1 or n == 0\n        return 1\n    return n * factor(n - 1)\n\n// call the function\nvar result = factor(5)\nstd::writeln(result) // output: 120\n"
+            },
+            {
+                "type": "text",
+                "value": "This is another text block."
+            },
+            {
+                "type": "text",
+                "value": "This is the new text block that has been added."
+            }
+        ]
+    },
+    {
+        "name": "Example 3",
+        "content": [
+            {
+                "type": "text",
+                "value": "This is an example of a text block."
+            },
+            {
+                "type": "code",
+                "value": "// include standard library\ninclude std\n\n// prints hello world with newline\nstd::writeln('Hello, world!')\n\n// define factorial function\ndefine factor(n)\n    if n == 1 or n == 0\n        return 1\n    return n * factor(n - 1)\n\n// call the function\nvar result = factor(5)\nstd::writeln(result) // output: 120\n"
+            },
+            {
+                "type": "text",
+                "value": "This is another text block."
+            },
+            {
+                "type": "code",
+                "value": "// include standard library\ninclude std\n\n// prints hello world with newline\nstd::writeln('Hello, world!')\n\n// define factorial function\ndefine factor(n)\n    if n == 1 or n == 0\n        return 1\n    return n * factor(n - 1)\n\n// call the function\nvar result = factor(5)\nstd::writeln(result) // output: 120\n"
+            }
+        ]
+    }
+]

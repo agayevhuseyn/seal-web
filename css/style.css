@@ -21,10 +21,15 @@ h1 {
     margin: 0px 0px 20px 0px;
 }
 
-/*! GENERAL STYLING FOR CODE BLOCKS */
+/*! GENERAL STYLING */
 code {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+}
+
+.nav-active {
+    border-bottom: 2px solid #4924bf;
+    color: #4924bf !important;
 }
 
 /*! Homepage */
@@ -49,6 +54,7 @@ code {
                 text-decoration: none;
                 color: #282C34;
                 transition: .3s ease all;
+                padding: 10px 5px;
             }
             & > a:hover {
                 color: #4924bf;
@@ -265,8 +271,8 @@ code {
         display: flex !important;
     }
     .logo {
-        & > img {
-            width: 100px;
+        & img {
+            width: 100px !important;
         }
     }
     .download{
