@@ -1,0 +1,13 @@
+.main {
+    flex-direction: column;
+    align-items: start !important;
+}
+
+h3 {
+    margin: 20px 0px 10px 0px;
+}
+
+pre {
+    width: 100%;
+    margin-top: 20px;
+}
