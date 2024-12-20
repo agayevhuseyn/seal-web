@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <title>About Seal</title>
+</head>
+<body>
+    <div class="sidebar_menu hidden">
+        <div class="sidebar">
+            <div class="close"><i class="ri-close-circle-fill"></i></div>
+            <div class="menu">
+                <a href="./documentation.html">Documentation</a>
+                <a href="./examples.html">Examples</a>
+                <a href="./about.html">About Seal</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!--! NAVBAR  -->
+        <div class="navbar">
+            <div class="logo">
+                <a href="./../index.html">
+                    <img src="./../img/logo.png" alt="Logo" width="175px">
+                </a>
+            </div>
+            <div class="links">
+                <a href="./documentation.html">Documentation</a>
+                <a href="./examples.html">Examples</a>
+                <a class="nav-active" href="./about.html">About Seal</a>
+            </div>
+            <div class="menu_btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+
+        <div class="main">
+            <h1>What is Seal?</h1>
+            <p>Seal is an interpreted dynamically typed programming language. Simplicity, minimal syntax, quick development time with less lines of code are main purposes of the language.</p>
+
+            <!-- <h3>Hello 2</h3> -->
+            <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla ex iure nemo quae a inventore cum alias neque voluptatem odio facilis non tempora porro omnis, ut, sunt vel cupiditate debitis.</p> -->
+
+            <pre><code class="language-javascript theme-atom-one-dark">
+include std
+
+define fib(n)
+    if n == 1 or n == 0
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+std::writeln(fib(9))    // output: 34 
+            </code></pre>
+
+
+        </div>
+
+    </div>
+    
+    <script src="./../js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/es/languages/javascript.min.js"></script>
+</body>
+</html>

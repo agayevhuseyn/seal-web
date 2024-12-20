@@ -1,4 +1,4 @@
-fetch('./../data/examples.json').then(data => data.json()).then(data => {displayExamples(data); setMobileMenuEventListener(data)});
+fetch('./../data/documentation.json').then(data => data.json()).then(data => {displayTopics(data); setMobileMenuEventListener(data);});
 
 const ANIM_DURATION = 200;
 
@@ -6,11 +6,28 @@ const desktopMenu = document.querySelector('.example-left ul')
 const mobileMenu = document.querySelector('.example-choose select')
 const exampleContent = document.querySelector('.example-right')
 
+
+const displayTopics = (data) => {
+    data.forEach((topic) => {
+        const topicHeader = document.createElement('li')
+        topicHeader.textContent = topic.topicName
+        topicHeader.classList.add('topic-header')
+        desktopMenu.appendChild(topicHeader)
+        
+        const topicMobileHeader = document.createElement('option')
+        topicMobileHeader.textContent = topic.topicName
+        topicMobileHeader.disabled = true
+        mobileMenu.appendChild(topicMobileHeader)
+        
+        displayExamples(topic.topics)
+    })
+}
+
 const displayExamples = (data) => {
     data.forEach((example, i) => {
         const newLi = document.createElement('li');
         newLi.innerHTML = example.name;
-        newLi.onclick = () => {displayExampleContent(example, exampleContent); activateMenu(newLi)};
+        newLi.onclick = () => {displayExampleContent(example); activateMenu(newLi)};
         if(i === 0) activateMenu(newLi)
         desktopMenu.appendChild(newLi);
 
@@ -20,10 +37,10 @@ const displayExamples = (data) => {
         mobileMenu.appendChild(newOption);
     });
 
-    displayExampleContent(data[0], exampleContent)
+    displayExampleContent(data[0])
 }
 
-const displayExampleContent = (example, exampleContent) => {
+const displayExampleContent = (example) => {
     animateChanges(exampleContent, () => {
         exampleContent.innerHTML = `<h1>${example.name}</h1>`
         example.content.forEach(block => {
