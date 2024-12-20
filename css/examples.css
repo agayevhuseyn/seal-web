@@ -88,3 +88,18 @@ ul {
         display: none;  
     }
 }
+
+.topic-header {
+    /* background-color: red; */
+    color: black;
+    cursor: auto !important;
+    
+    &:hover{
+        background-color: transparent !important;
+        color: black !important;
+    }
+}
+
+.example-left li:not(.topic-header){
+    padding-left: 30px;
+}
