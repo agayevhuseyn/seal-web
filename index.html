@@ -54,11 +54,11 @@
             </div>
             <div class="right">
                 <pre><code class="language-javascript theme-atom-one-dark">
-// include standard library
-include std
+// include I/O module
+include io
 
 // prints hello world with newline
-std::writeln("Hello, world!")
+print('Hello, Seal')
 
 // define factorial function
 define factor(n)
@@ -67,8 +67,16 @@ define factor(n)
     return n * factor(n - 1)
 
 // call the function
-var result = factor(5)
-std::writeln(result) // output: 120
+result = factor(5)
+
+// and store the result in a file
+file = io.File('result.txt', 'w')
+
+file..write(str(result))
+// is equivalent to file.write(file, str(result))
+
+// close the file
+file..close()
                 </code></pre>
             </div>
         </div>
